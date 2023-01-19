@@ -1,29 +1,24 @@
-﻿DateTime[] DOB = new DateTime[5];
-for(int i = 0; i < 5; i++)
+﻿string[] Desinations = new string[3];
+decimal[] FareList = new decimal[3];
+int i = 0;
+for(i = 0;i < 3; i++)
 {
-    Console.WriteLine("Date of Birth: ");
-    DOB[i] = Convert.ToDateTime(Console.ReadLine());
+    Console.WriteLine("Desination: ");
+    Desinations[i] = Console.ReadLine();
+    Console.WriteLine("Enter the flight fare: ");
+    FareList[i] = Convert.ToDecimal(Console.ReadLine());
 }
-foreach(DateTime i in DOB)
-{
-    var today = DateTime.Today;
-    TimeSpan interval = today - i;
-    int Age = (interval.Days) / 365;
 
-    if(Age <= 10)
-    {
-        Console.WriteLine("Passenger is kid");
-    }
-    else if (Age > 10 && Age <= 30)
-    {
-        Console.WriteLine("Passenger is Youth");
-    }
-    else if (Age > 30 && Age <= 60)
-    {
-        Console.WriteLine("Passenger is Adult");
-    }
-    else if (Age > 60)
-    {
-        Console.WriteLine("Passenger is Older");
-    }
+Console.WriteLine("Enter the nth index: ");
+int d = Convert.ToInt32(Console.ReadLine());
+
+
+if(d > 3)
+{
+    Console.WriteLine("Invalid Index");
+}
+else
+{
+    Console.WriteLine("Desination: " + Desinations[d]);
+    Console.WriteLine("Flight fare: " + FareList[d]);
 }
