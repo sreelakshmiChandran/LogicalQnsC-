@@ -7,7 +7,7 @@ for (int i = 0; i < 10; i++)
 {
     Console.WriteLine("Enter the passenger name: ");
     names[i] = Console.ReadLine();
-    Console.WriteLine("Enter the desination: ");
+    Console.WriteLine("Enter the destination: ");
     destinations[i] = Console.ReadLine();
 }
 
@@ -21,7 +21,7 @@ for (int i = 0; i < 10; i++)
     newArray[k] = destinations[i];
     k += 2;
 }
-Console.WriteLine("The names and desinations are:");
+Console.WriteLine("The names and destinations are:");
 foreach (var item in newArray)
 {
     Console.WriteLine(item);
